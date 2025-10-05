@@ -25,13 +25,18 @@ Include the parameters in the JSON body:
 | `nome`      | `string` | sets a name for the new user |
 
 #### Updates the user
+```http
+  PUT /usuario?id=id
+```
 In the JSON body, update the desired data: email, name, or both:
 | Parameter |	Type	| Description |
 | :---------- | :--------- | :------------------------------------------ |
-| 'email'	| 'string'	| sets an email to update |
-| 'nome'	| 'string'	| sets a name to update |
+| 'id'	| 'integer'	| user Id |
 
 #### Deletes the user
+```http
+  DELETE /usuario?email=email@email.com
+```
 Deletes a user by the email defined in the parameter:
 | Parameter   | Type       | Description                                   |
 | :---------- | :--------- | :------------------------------------------ |
