@@ -31,8 +31,9 @@ public class UsuarioController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> atualizarUsuarioPorId(@RequestParam String email,
+    public ResponseEntity<Void> atualizarUsuarioPorId(@RequestParam Integer id,
                                                       @RequestBody Usuario usuario){
-
+        usuarioService.atualizaUsuarioPorId(id, usuario);
+        return ResponseEntity.ok().build();
     }
 }
